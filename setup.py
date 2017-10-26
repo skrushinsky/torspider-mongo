@@ -24,9 +24,9 @@ setup(name='torspider-mongo',
       entry_points={
           # see: http://amir.rachum.com/blog/2017/07/28/python-entry-points/
           'torspider_init': [
-              'mongo_client_init = torspidermongo:init_client',
+              'mongo_client = torspidermongo:init_client',
           ],
           'torspider_consume': [
-              'mongo_client_save = torspidermongo:save_report',
+              'mongo_client = torspidermongo:save_report',
           ],
       })
