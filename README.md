@@ -5,7 +5,7 @@ saves each report to MongoDB.
 
 ## Configuration
 
-* **db** MongoDB connections string, including database name, by default:<br>
+* **db**: MongoDB connections string, including database name, by default:<br>
   `mongodb://localhost:27017/torspider`
 
 
@@ -51,5 +51,16 @@ Both success and error reports are saved in **reports** collection.
             "Server" : "lighttpd/1.4.35"
         }
     }
+}
+```
+
+#### Example of failure report
+
+```
+{
+    "_id" : ObjectId("59f257648ed173c4e710e627"),
+    "url" : "http://crawlers.info/feeds/all.atom.xml",
+    "ts" : ISODate("2017-10-26T21:47:06.241Z"),
+    "error" : "Illegal  Content-Type: application/xml"
 }
 ```
